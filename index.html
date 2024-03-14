@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: rgb(42, 40, 40);
+            width: 50%;
+            max-width: 380px;
+            margin: auto;
+            padding: 10px;
+        }
+        #video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        #durationWarning {
+            width: 70%;
+            color: red;
+        }
+
+        #description {
+            width: 100%;
+            line-height: 50%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px; /* 10% of container height */
+            margin-bottom: 5px;
+
+        }
+
+        #desc{
+            font-size: medium; 
+            color: rgb(245, 239, 239);
+        }
+
+        #profile-container {   
+            width: 100%; 
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #profile-image {
+            margin-left: 10px; /* Adjust margin as needed */
+        }
+
+        #profile-image img {
+            margin-right: 15px;
+            width: 50px; /* Adjust image size as needed */
+            height: 50px;
+            border-radius: 50%; /* Makes the image circular */
+        }
+
+        #profile-info p {
+            width: 150px;
+            color: white;
+            
+            margin-right: 10px;
+            padding-top: 0px;
+            margin-top: 0px; /* Remove default margin */
+        }
+
+        #subscribe{
+            color: #222121;
+            text-align: center;
+            width: 130px;
+            height: 40px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin: 10px;
+            border-radius: 50px;
+            background-color: rgb(241, 237, 237);
+        }
+
+        #items-container{
+            width: 100%;
+        }
+        
+        .item-container {
+            height: 30px;
+            width: 80px;
+            border-radius: 50px;
+            background-color: rgb(33, 32, 32);
+            display: flex;
+            align-items: center;
+            margin: 5px; 
+        }
+
+        #like{
+            margin-left: 10px;
+            color: white;
+            width: 15px;
+            height: 15px;
+            filter: invert(100%);
+        }
+
+        #dislike{
+            width: 15px;
+            height: 15px;
+            filter: invert(100%);
+        }
+
+        #share{
+            margin-left: 10px;
+            width: 15px;
+            height: 15x;
+            filter: invert(100%);
+        } 
+
+        .item-container-download {
+            height: 30px;
+            width: 110px;
+            border-radius: 50px;
+            background-color: rgb(33, 31, 31);
+            display: flex;
+            align-items: center;
+            margin: 5px; 
+        }
+
+        #comments{
+            width: 100%;
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 0%;
+            background-color: rgb(37, 35, 35); 
+
+            /* border-radius: 15px;
+
+            margin-left: 10px;
+            margin-right: 10px; 
+            background-color: rgb(64, 57, 57); */
+        }
+
+        #comment-styles{
+            margin-left: 15px; 
+            background-color: rgb(31, 30, 30); 
+            margin-right: 15px;
+            margin-top: 2px;
+            padding: 5px;
+        }
+
+        #profile-container-comment {
+            margin-left: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(31, 30, 30); 
+            margin-right: 15px;
+        }
+
+        #profile-image-comment img{
+            margin-right: 10px;
+            margin-left: 20px;
+            width: 30px; /* Adjust image size as needed */
+            height: 30px;
+            border-radius: 50%; 
+        }
+
+        #profile-info-comment {
+            width: 70%;
+            font-size: small;
+            margin: 0px; /* Remove default margin */
+        }
+
+        #content-1 img{
+            width: 100%;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video id="video" controls src="./assets/code.mp4"></video>
+        <p id="durationWarning"></p>
+
+        <!-- Description -->
+
+        <div id="description">
+            <p id="desc" style="font-size: medium; color: rgb(245, 239, 239);"><b>The future of coding shines brightly, and I aspire <br><br><br>to be part of it!</b></p>
+            <p id="views" style="font-size: xx-small; color: rgb(247, 243, 243);">2347 views 1d ago #coding</p>
+        </div>
+
+        <!-- Profile -->
+
+        <div id="profile-container">
+            <div id="profile-image">
+                <img src="./assets/profile_code.png" alt="Profile Image">
+            </div>
+            <div id="profile-info">
+                <p>$hishir_sangu 3k</p>
+            </div>
+            <div id="subscribe">
+                <p><b>Subscribe</b></p>
+            </div>
+        </div>
+
+        <!-- likes -->
+
+        <div id="items-container" style="display: flex;">
+
+            <div class="item-container">
+                <img src="./assets/like.png" id="like">
+                <p style="margin: 5px; font-size: x-small; color: white;"><b>23k |</b></p>
+                <img src="./assets/dislike.png" id="dislike">
+            </div>
+        
+            <div class="item-container">
+                <img src="./assets/share.png" id="share">
+                <p style="color: rgb(231, 225, 225);"> Share</p>
+            </div>
+        
+            <div class="item-container">
+                <img src="./assets/remix.png" id="share">
+                <p style="color: white;"> Remix</p>
+            </div>
+        
+            <div class="item-container-download">
+                <img src="./assets/download.png" id="share">
+                <p style="color: white;">Download</p>
+            </div>
+        </div>
+
+        <!-- Comments -->
+
+        <div id="comments">
+            <div>
+                <h3 id="comment-styles">Comments <span style="font-size: small;">8.2k</span></h3>
+
+            </div>
+            
+            <div id="profile-container-comment">
+                <div id="profile-image-comment">
+                    <img src="./assets/my_DP.png" alt="Profile Image">
+                </div>
+                <div id="profile-info-comment">
+                    <p>Nice trailer!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Adevertisement -->
+
+        <div id="content-1">
+            <img src="./assets/images.jpeg" />
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        var video = document.getElementById('video');
+        var durationWarning = document.getElementById('durationWarning');
+
+        video.addEventListener('loadedmetadata', function() {
+            var duration = Math.floor(video.duration);
+            if (duration < 6 || duration > 15) {
+                durationWarning.innerText = "Warning: Reel duration should be between 6 to 15 seconds.";
+            } else {
+                durationWarning.innerText = "";
+            }
+        });
+    </script>
+</body>
+</html>
